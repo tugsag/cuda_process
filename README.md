@@ -12,11 +12,11 @@ This is a simple demo of a bridge that uses parallel reduction on GPU via CUDA a
 5. NEW: support for massive inputs using async pipeline and CUDA streams leveraging PyTorch's stream API, and uses persistent memory allocation to cut down on transfer latency
 
 ## Where to go from the current state (potential improvements)
-- [] Support multichannel images: use float3 struct to store running sums per channel
+- [ ] Support multichannel images: use float3 struct to store running sums per channel
     * Adjust addressing method to be interleaved to avoid bank conflicts (avoid slowdowns)
 - [x] Support massive inputs: implement an asynchronous pipeline using CUDA Streams to overlap PCIe data transfers with kernel execution to hide transfer latency for out-of-core datasets
     * Use persistent memory allocation for this to cut down on transfer latency
-- [] Use other allocation methods (cudaHostAlloc) to speed up transfer latency
+- [ ] Use other allocation methods (cudaHostAlloc) to speed up transfer latency
 
 
 ## Comment on performance
