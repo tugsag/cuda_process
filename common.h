@@ -2,9 +2,9 @@
 #define COMMON_H
 
 struct Stats {
-    float mean = 0.0f;
-    float var = 0.0f;
-    float std = 0.0f;
+    double mean = 0.0;
+    double var = 0.0;
+    double std = 0.0;
 };
 
 
